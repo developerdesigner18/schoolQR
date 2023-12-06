@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bk"
+    tools:context=".Teacher.Fragment.QRScanFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_gravity="center"
+                android:alpha="0.8"
+                android:src="@drawable/take_photo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:fontFamily="@font/corbel"
+                android:gravity="center"
+                android:text="Ready to Take Photos"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_18sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Scan child's QR - Take a picture" />
+
+            <Button
+                android:id="@+id/btnScanQR"
+                style="@style/buttonAccent"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_qr_code"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_35sdp"
+                android:text="Scan QR" />
+
+            <Button
+                android:id="@+id/btnUploadQR"
+                style="@style/buttonPrimary"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_qr_code"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_35sdp"
+                android:text="Upload QR" />
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/_10sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_add_student"
+        android:tint="@color/White" />
+</FrameLayout>

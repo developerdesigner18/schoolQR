@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Teacher.Fragment.QRScanFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="@dimen/_75sdp"
+                android:src="@drawable/ic_user"
+                app:civ_border_color="#eee"
+                android:layout_marginTop="@dimen/_40sdp"
+                app:civ_border_width="@dimen/_5sdp" />
+
+            <TextView
+                android:id="@+id/tvParentName"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Parent"
+                android:textColor="@color/colorAccent" />
+
+            <ImageView
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_140sdp"
+                android:layout_gravity="center"
+                android:alpha="0.8"
+                android:src="@drawable/take_photo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/corbel"
+                android:gravity="center"
+                android:text="Ready to Take Photos"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_18sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="Scan child's QR - Take a Picture" />
+
+            <Button
+                android:id="@+id/btnScanQR"
+                style="@style/buttonAccent"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/ic_qr_code"
+                android:drawableLeft="@drawable/ic_qr_code"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_30sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:text="Scan QR" />
+
+            <Button
+                android:id="@+id/btnUploadQR"
+                style="@style/buttonPrimary"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/ic_qr_code"
+                android:drawableLeft="@drawable/ic_qr_code"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_30sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:text="Upload QR" />
+
+            <Button
+                android:id="@+id/btnViewStudent"
+                style="@style/buttonAccent"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/ic__student_view"
+                android:drawableLeft="@drawable/ic__student_view"
+                android:paddingStart="@dimen/_15sdp"
+                android:drawableTint="@android:color/white"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_30sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="View Student" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+   <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabViewStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/_10sdp"
+        android:clickable="true"
+        android:visibility="visible"
+        android:focusable="true"
+        android:src="@drawable/ic__student_view"
+        android:tint="@color/White" />-->
+</FrameLayout>

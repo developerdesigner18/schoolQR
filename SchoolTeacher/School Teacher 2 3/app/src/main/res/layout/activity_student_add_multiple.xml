@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Teacher.Activity.StudentAddMultipleActivity">
+    <include
+        android:id="@+id/mToolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <androidx.core.widget.NestedScrollView
+        android:background="@drawable/login_bk"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center|top"
+            style="@style/layoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/app_icon"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_gravity="start"
+                style="@style/formHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Multiple Student" />
+
+            <TextView
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="Select XLXs file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_130sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/background_white_border"
+                    android:scaleType="centerCrop"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_file" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                style="@style/buttonAccent"
+                android:layout_width="match_parent"
+                android:text="Submit" />
+
+            <TextView
+                android:id="@+id/tvSampleFile"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="Download Sample CSV file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

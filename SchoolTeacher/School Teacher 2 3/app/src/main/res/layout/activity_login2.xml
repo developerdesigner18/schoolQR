@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="@color/White"
+        android:layout_height="@dimen/_40sdp">
+        <ImageView
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/Gray"
+            android:onClick="onBackClick"
+            android:padding="@dimen/_10sdp"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_5sdp" />
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:background="@drawable/login_bk"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center|top"
+            style="@style/layoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/app_icon"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"/>
+
+            <TextView
+                android:layout_gravity="start"
+                style="@style/formHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Welcome Back!" />
+
+
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_marginTop="@dimen/_25sdp"-->
+<!--                    style="@style/inputLayout"-->
+<!--                    android:orientation="vertical"-->
+<!--                    >-->
+
+<!--                    <EditText-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:id="@+id/etICNumber"-->
+<!--                        style="@style/editText"-->
+<!--                        android:hint="Student reference"-->
+<!--                        android:inputType="text"-->
+
+<!--                        />-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    style="@style/editText"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    style="@style/editText"
+                    android:hint="Password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/textView"
+                android:onClick="onForgotClick"
+                android:text="Forgot password?"
+                android:gravity="end"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnLogIn"
+                style="@style/buttonAccent"
+                android:layout_width="match_parent"
+                android:text="Login My Account" />
+
+            <TextView
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/tvRegister"
+                style="@style/textView"
+                android:gravity="center"
+                android:text="Don't have an account? Sign Up"
+                android:textColor="@color/Gray" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

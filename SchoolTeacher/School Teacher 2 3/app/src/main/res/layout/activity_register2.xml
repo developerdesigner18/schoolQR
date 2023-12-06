@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/White">
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:onClick="onBackClick"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/Gray" />
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_bk"
+        android:fillViewport="true">
+
+        <LinearLayout
+            style="@style/layoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/app_icon" />
+
+            <TextView
+                style="@style/formHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="Parent Register" />
+
+            <TextView
+                style="@style/textView"
+                android:text="Get started by signing up for an account. Approval within 24 hrs."
+                android:textColor="@color/LightGrey"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                android:layout_marginTop="@dimen/_20sdp"-->
+            <!--                style="@style/inputLayout">-->
+
+            <!--                <EditText-->
+            <!--                    android:id="@+id/etICNumber"-->
+            <!--                    style="@style/editText"-->
+            <!--                    android:hint="Student reference"-->
+            <!--                    android:inputType="text" />-->
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etCode"
+                    style="@style/editText"
+                    android:hint="School code"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etFirstName"
+                    style="@style/editText"
+                    android:hint="Name"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:text="Date of birth"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etDate"
+                style="@style/editText"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="00-00-0000"
+                android:inputType="none" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    style="@style/editText"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputMobile"
+                style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etMobile"
+                    style="@style/editText"
+                    android:digits="1234567890"
+                    android:hint="Mobile number"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPassword"
+                style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    style="@style/editText"
+                    android:hint="Password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvTerms"
+                style="@style/textView"
+                android:gravity="center"
+                android:text="By Signup, you are agree our terms and conditions."
+                android:textColor="@color/Gray" />
+
+            <Button
+                android:id="@+id/btnSignUp"
+                style="@style/buttonAccent"
+                android:layout_width="match_parent"
+                android:text="Sign up" />
+
+            <TextView
+                android:id="@+id/tvSignIn"
+                style="@style/inputLayout"
+                android:gravity="center"
+                android:text="Have account? Sign In Now"
+                android:textColor="@color/Gray" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

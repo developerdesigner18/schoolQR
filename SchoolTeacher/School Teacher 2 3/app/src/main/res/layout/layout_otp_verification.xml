@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_4sdp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="@dimen/_3sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/ic_clear"
+            android:tint="@color/colorAccent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/otp_verification"
+                android:textColor="@color/notificationHead"
+                android:textSize="@dimen/_14sdp" />
+
+
+            <EditText
+                android:id="@+id/et_otp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_margin="@dimen/_20sdp"
+                android:background="@drawable/boder"
+                android:hint="Enter OTP"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btn_continue"
+                style="@style/buttonAccent"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:text="Continue" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvResendOtp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="Resend OTP"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

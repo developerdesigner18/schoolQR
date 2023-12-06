@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Teacher.Activity.NotificationAddActivity">
+
+    <include
+        android:id="@+id/topToolbar"
+        layout="@layout/layout_toolbar_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_bk"
+        android:fillViewport="true">
+
+        <LinearLayout
+            style="@style/layoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top">
+
+            <ImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/app_icon" />
+
+            <TextView
+                style="@style/formHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Send notification" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/inputLayout"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <EditText
+                    android:id="@+id/etTitle"
+                    style="@style/editText"
+                    android:hint="Title"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etDesc"
+                    style="@style/editText"
+                    android:gravity="start"
+                    android:hint="Description"
+                    android:inputType="textMultiLine"
+                    android:maxLines="3"
+                    android:minLines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="Downlodable: "
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioGroup
+                    android:id="@+id/radiogroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <RadioButton
+                        android:id="@+id/radio_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:checked="true"
+                        android:textSize="@dimen/_12sdp"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/radio_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_marginLeft="@dimen/_10sdp" />
+
+                </RadioGroup>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_130sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/background_white_border"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_image_thumbnail" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSend"
+                style="@style/buttonAccent"
+                android:layout_width="match_parent"
+                android:text="Send" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

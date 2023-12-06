@@ -1,0 +1,165 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="customProgressWhite" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="editText" parent="parent">
+        <item name="android:textSize">15sp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:minLines">1</item>
+        <item name="android:textColorHint">@color/LightGrey</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:backgroundTint">@color/primaryTextColor</item>
+    </style>
+
+    <style name="appIcon">
+        <item name="android:src">@drawable/app_icon</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="viewParent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="buttonAccent" parent="viewParent">
+        <item name="android:background">@drawable/button_accent</item>
+        <item name="android:textColor">@color/whiteTextColor</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+    </style>
+
+    <style name="tagPrimary" parent="viewParent">
+        <item name="android:background">@drawable/background_tag_primary</item>
+        <item name="android:textColor">@color/whiteTextColor</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+    </style>  <style name="tagPrimaryred" parent="viewParent">
+        <item name="android:background">@drawable/background_tag_primary</item>
+        <item name="android:textColor">@color/whiteTextColor</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="buttonPrimary" parent="viewParent">
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@drawable/button_primary</item>
+        <item name="android:textColor">@color/whiteTextColor</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+    </style>
+
+    <style name="buttonWhite">
+        <item name="android:layout_gravity">center</item>
+        <!--<item name="android:textColor">@color/Black</item>-->
+        <!--<item name="android:background">@drawable/background_button_white</item>-->
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginLeft">@dimen/_5sdp</item>
+        <item name="android:layout_marginRight">@dimen/_5sdp</item>
+        <item name="android:layout_marginTop">@dimen/_5sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_5sdp</item>
+    </style>
+
+    <style name="splashHeader">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="formHeader">
+        <item name="android:textColor">#4CA0DE</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+
+    <style name="inputLayout" parent="parent">
+        <item name="android:layout_marginTop">@dimen/_5sdp</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+    </style>
+
+    <style name="parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="loginParent" parent="parent">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/loginBkColor</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="textView" parent="parent">
+
+    </style>
+
+    <style name="notificationHead">
+        <item name="android:fontFamily">@font/corbel</item>
+        <item name="android:textColor">@color/notificationHead</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="notificationContent">
+        <item name="android:fontFamily">@font/corbell</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/notificationContent</item>
+    </style>
+
+    <style name="profileContent" parent="parent">
+        <item name="android:fontFamily">@font/arial</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_marginTop">@dimen/_5sdp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/notificationContent</item>
+    </style>
+
+    <style name="profileHead" parent="parent">
+        <item name="android:fontFamily">@font/corbel</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/notificationHead</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="layoutContainer">
+        <item name="android:layout_marginStart">@dimen/_35sdp</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_35sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_8sdp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    <style name="TextAppearance.AppTheme.TextInputLayout.HintTextAlt" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Widget.AppTheme.TextInputLayoutList" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/TextAppearance.AppTheme.TextInputLayout.HintTextAlt</item>
+        <item name="boxStrokeColor">@android:color/black</item>
+        <item name="boxCornerRadiusBottomEnd">5dp</item>
+        <item name="boxCornerRadiusBottomStart">5dp</item>
+        <item name="boxCornerRadiusTopEnd">5dp</item>
+        <item name="boxCornerRadiusTopStart">5dp</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.newmysmileQR">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="m">
+        <activity android:name="com.newmysmileQR.Parent.Activity.NotificationImage" />
+        <activity android:name="com.newmysmileQR.Teacher.Activity.NotificationImage" />
+        <activity android:name="com.newmysmileQR.Teacher.Activity.ChangePassword" />
+        <activity android:name="com.newmysmileQR.Parent.Activity.SchoolListActivity" />
+        <activity android:name="com.newmysmileQR.Teacher.Activity.School" />
+        <activity android:name="com.newmysmileQR.Teacher.Activity.AllNotification" />
+        <activity android:name="com.newmysmileQR.Parent.Activity.ChangePassword" />
+        <activity android:name="com.newmysmileQR.Teacher.Activity.SearchActivity" />
+        <activity android:name="com.newmysmileQR.Teacher.Activity.EditProfileActivity" />
+        <activity android:name="com.newmysmileQR.Teacher.Activity.StudentAddMultipleActivity" />
+        <activity android:name="com.newmysmileQR.ImageActivity" />
+        <activity android:name="com.newmysmileQR.Teacher.Activity.StudentAddActivity" />
+        <activity android:name="com.newmysmileQR.Teacher.Activity.NotificationAddActivity" />
+        <activity android:name="com.newmysmileQR.Teacher.Activity.MediaActivity" />
+        <activity android:name="com.newmysmileQR.Teacher.Activity.QRDetailActivity" />
+        <activity android:name="com.newmysmileQR.TermsConditionActivity" />
+        <activity android:name="com.newmysmileQR.Parent.Activity.ForgotPassword" />
+        <activity android:name="com.newmysmileQR.Parent.Activity.RegisterActivity" />
+        <activity android:name="com.newmysmileQR.Parent.Activity.DashboardActivity" />
+        <activity android:name="com.newmysmileQR.Parent.Activity.LoginActivity" />
+        <activity android:name="com.newmysmileQR.SelectActivity" />
+        <activity android:name="com.newmysmileQR.Teacher.Activity.DashboardActivity" />
+        <activity android:name="com.newmysmileQR.Teacher.Activity.ForgotPassword" />
+        <activity
+            android:name="com.newmysmileQR.SplashActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.newmysmileQR.Teacher.Activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.newmysmileQR.Teacher.Activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.newmysmileQR.ScanActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.newmysmileQR.Parent.Activity.MediaActivity" />
+        <activity android:name="com.newmysmileQR.Parent.Activity.EditProfileActivity" />
+        <activity android:name="com.newmysmileQR.Parent.Activity.AppIntro" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <service android:name="com.newmysmileQR.Utility.Notification.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.newmysmileQR"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths1"
+                tools:replace="resource" />
+        </provider>
+    </application>
+
+</manifest>

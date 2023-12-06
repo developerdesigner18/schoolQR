@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 34
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+        applicationId "com.mysmileqr"
+        minSdkVersion 16
+        targetSdkVersion 34
+        versionCode 1
+        versionName "0.1"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    //Key Alias :- key0
+    //Key Store Password :- 123456
+    //Password :- 123456
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "androidx.multidex:multidex:2.0.1"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+
+    implementation 'com.google.android.material:material:1.2.0-alpha01'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    //retrofit, Gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+
+    //video Compressor && tooltip
+    implementation 'org.mp4parser:isoparser:1.9.27'
+    implementation 'com.nhaarman.supertooltips:library:3.0.0'
+
+    //pdf viewer
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+    implementation 'agency.tango.android:avatar-view:0.0.2'
+
+    //if you want to use Picasso for loading images
+    implementation 'agency.tango.android:avatar-view-picasso:0.0.2'
+
+    //if you want to use Glide for loading images
+    implementation 'agency.tango.android:avatar-view-glide:0.0.2'
+    implementation 'com.scottyab:aescrypt:0.0.1'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+    // qr code
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
+    implementation 'com.google.android.gms:play-services-vision:19.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
+    //Fire base notification
+    implementation 'com.google.firebase:firebase-messaging:20.0.1'
+    implementation 'com.google.firebase:firebase-core:17.2.1'
+
+    //ImagePicker
+    implementation 'com.github.nguyenhoanglam:ImagePicker:1.3.3'
+
+    implementation 'ru.egslava:MaskedEditText:1.0.5'
+
+}
+apply plugin: 'com.google.gms.google-services'

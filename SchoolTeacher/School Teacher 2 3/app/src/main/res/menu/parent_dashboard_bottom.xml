@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mScan"
+        android:icon="@drawable/ic_qr_code"
+        android:title="QR scan" />
+    <!--<item android:id="@+id/mAdd" android:title="Upload" android:icon="@drawable/ic_add_student"/>-->
+    <item
+        android:id="@+id/mNotification"
+        android:icon="@drawable/ic_notification"
+        android:title="Notification" />
+    <item
+        android:id="@+id/mProfile"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile" />
+</menu>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topToolbar"
+        layout="@layout/layout_toolbar_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_bk"
+        android:fillViewport="true">
+
+        <LinearLayout
+            style="@style/layoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top">
+
+            <ImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/app_icon"
+                 />
+
+            <TextView
+                style="@style/formHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Add Student" />
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                style="@style/inputLayout"-->
+<!--                android:layout_marginTop="@dimen/_25sdp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/etICNumber"-->
+<!--                    style="@style/editText"-->
+<!--                    android:hint="Student reference" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etFirstName"
+                    style="@style/editText"
+                    android:hint="First name"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etLastName"
+                    style="@style/editText"
+                    android:hint="Last name"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etFatherName"
+                    style="@style/editText"
+                    android:hint="Father name"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etMotherName"
+                    style="@style/editText"
+                    android:hint="Mother name"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:text="Date of birth"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etDate"
+                style="@style/editText"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="dd-MM-yyyy"
+                android:inputType="none" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <Spinner
+                    android:id="@+id/spCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    />
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputMobile"
+                        style="@style/inputLayout">
+
+                        <EditText
+                            android:id="@+id/etMobile"
+                            style="@style/editText"
+                            android:digits="1234567890"
+                            android:hint="Mobile Number"
+                            android:inputType="phone" />
+                        <TextView
+                            android:textSize="@dimen/_7sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="Phone number"
+                            android:visibility="gone"
+                            android:textColor="@color/Gray" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                   <!-- <TextView
+                        android:id="@+id/tvVerify"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:text="Verify"
+                        android:textColor="@color/colorAccent" />
+-->
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    style="@style/editText"
+                    android:hint="Email address"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                style="@style/buttonAccent"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:text="Submit" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

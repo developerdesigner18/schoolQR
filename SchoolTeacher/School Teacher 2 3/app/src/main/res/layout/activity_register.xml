@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/White">
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:onClick="onBackClick"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/Gray" />
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_bk"
+        android:fillViewport="true">
+
+        <LinearLayout
+            style="@style/layoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top">
+
+            <ImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/app_icon" />
+
+            <TextView
+                style="@style/formHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="Teacher Register" />
+
+            <TextView
+                style="@style/textView"
+                android:text="Get started by signing up for an account. Approval within 24 hrs."
+                android:textColor="@color/LightGrey"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/inputLayout"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <EditText
+                    android:id="@+id/etCode"
+                    style="@style/editText"
+                    android:hint="School Code" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etFirstName"
+                    style="@style/editText"
+                    android:hint="Full Name"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    style="@style/editText"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <Spinner
+                    android:id="@+id/spCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    />
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputMobile"
+                        style="@style/inputLayout">
+
+                        <EditText
+                            android:id="@+id/etMobile"
+                            style="@style/editText"
+                            android:digits="1234567890"
+                            android:hint="Mobile Number"
+                            android:inputType="phone" />
+                        <TextView
+                            android:textSize="@dimen/_7sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="Phone number with country code"
+                            android:textColor="@color/Gray" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tvVerify"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:text="Verify"
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginEnd="@dimen/_10sdp" />
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPassword"
+                style="@style/inputLayout">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    style="@style/editText"
+                    android:enabled="true"
+                    android:hint="Password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:gravity="start|center"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <CheckBox
+                   android:id="@+id/cbSign"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <TextView
+                   android:id="@+id/tvTerms"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="wrap_content"
+                   android:text="I accept the terms and conditions relating to the use of this application."
+                   android:textColor="@color/Gray" />
+
+           </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSignUp"
+                style="@style/buttonAccent"
+                android:layout_width="match_parent"
+                android:text="Sign Up" />
+
+            <TextView
+                android:id="@+id/tvSignIn"
+                style="@style/inputLayout"
+                android:gravity="center"
+                android:text="Have account? Sign In Now"
+                android:textColor="@color/Gray" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
